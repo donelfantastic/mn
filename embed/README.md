@@ -1,7 +1,3 @@
-Simple Clappr player embed to play HLS or MPD non DRM options
-=
+ClopprCK! 
 
-https://murid-nakal.github.io/mn/embed/?live&url=YOUR-URL-HERE
-
-
-https://murid-nakal.github.io/mn/embed/clappTv?live&url=YOUR-URL-HERE
+https://donelfantastic.github.io/mn/embed/clopprCK?live&url=
