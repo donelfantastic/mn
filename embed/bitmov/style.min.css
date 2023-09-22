@@ -1,13 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-
   border: 0;
   background-color: #000000;
   overflow: hidden;
 }
 
-#my-player {
+my-player {
   position: absolute;
   width: 100% !important;
   height: 100% !important;
