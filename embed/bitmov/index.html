@@ -14,56 +14,12 @@
   <meta name="robots" content="noindex" />
   <link rel="stylesheet" href="style.min.css"/>
   <script type="text/javascript" src="script.min.js"></script>
- <!--
-  <style>
-    html, 
-    body {
-      position: relative;
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      border: 0;
-      background: #000000;
-      overflow: hidden;
-    }
-    
-  my-player {
-  position: absolute;
-  width: 100% !important;
-  height: 100% !important;
-  
-}
-    .bmpui-ui-watermark {
-      display: none;
-    }
-  </style>
--->
-  <!--
-  <script type="text/javascript">
-    function override(url) {
-      if (url.indexOf("licensing.bitmovin.com/licensing") > -1)
-        return "data:text/plain;charset=utf-8;base64,eyJzdGF0dXMiOiJncmFudGVkIiwibWVzc2FnZSI6IlRoZXJlIHlvdSBnby4ifQ==";
-      if (url.indexOf("licensing.bitmovin.com/impression") > -1)
-        return "data:text/plain;charset=utf-8;base64,eyJzdGF0dXMiOiJncmFudGVkIiwibWVzc2FnZSI6IlRoZXJlIHlvdSBnby4ifQ==";
-      return url;
-    }
-    var opens = XMLHttpRequest.prototype.open;
-    XMLHttpRequest.prototype.open = function() {
-      var url = override(arguments[1]);
-      arguments[1] = url;
-      return opens.apply(this, arguments);
-    };
-  </script>
-  -->
 </head>
-
 <body>
  <body oncontextmenu="return false" onkeydown="return false" onmousedown="return false"> 
             <div id="my-player"></div>
-        
 </body>
-//v8.52.0
+<!--//v8.52.0//-->
 <script type="text/javascript" src="https://cdn.bitmovin.com/player/web/8.137.0/bitmovinplayer.js"></script>
   <script type="text/javascript">
   var container = document.getElementById("my-player");
