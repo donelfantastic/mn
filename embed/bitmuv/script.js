@@ -1,3 +1,18 @@
+function override(url){
+    if (url.indexOf("licensing.bitmovin.com/licensing") > -1) return "bm";
+    if (url.indexOf("licensing.bitmovin.com/impression") > -1) return "impression";
+    return url;
+}
+
+var open = XMLHttpRequest.prototype.open;
+XMLHttpRequest.prototype.open = function() {
+        var url = override(arguments[1]);
+        arguments[1] = url;
+        return open.apply(this, arguments);
+
+}
+
+/*
 function override(url) {
       if (url.indexOf("licensing.bitmovin.com/licensing") > -1)
         return "data:text/plain;charset=utf-8;base64,eyJzdGF0dXMiOiJncmFudGVkIiwibWVzc2FnZSI6IlRoZXJlIHlvdSBnby4ifQ==";
@@ -11,7 +26,7 @@ function override(url) {
       arguments[1] = url;
       return opens.apply(this, arguments);
     }
-/*
+
 const currentLocation = window.location.search;
 const sURL = currentLocation.replace("?live&url=", "");
 var container = document.getElementById("my-player");
