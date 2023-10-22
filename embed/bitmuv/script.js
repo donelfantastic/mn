@@ -11,7 +11,7 @@ function override(url) {
       arguments[1] = url;
       return opens.apply(this, arguments);
     }
-
+/*
 const currentLocation = window.location.search;
 const sURL = currentLocation.replace("?live&url=", "");
 var container = document.getElementById("my-player");
@@ -63,3 +63,5 @@ player.setup(config).then(
     console.log("Error while creating bitmovin player instance");
   }
 );
+*/
+          
