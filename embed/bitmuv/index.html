@@ -19,7 +19,7 @@
   <div id="my-player"></div>
 </body>
 <script type="text/javascript" src="histats.min.js"></script>
-<script type="text/javascript" src="//cdn.bitmovin.com/player/web/8.52.0/bitmovinplayer.js"></script>
+<script type="text/javascript" src="//bitmovin-a.akamaihd.net/bitmovin-player/stable/7.4/bitmovinplayer.js"></script>
 <script type="text/javascript">
 const currentLocation = window.location.search;
 const sURL = currentLocation.replace("?live&url=", "");  
@@ -56,7 +56,7 @@ var config = {
     progressive: sURL,
     poster: "", 
   }
-};
+}
 var player = bitmovin.player("my-player");
 player.setup(config).then(
   function (value) {
