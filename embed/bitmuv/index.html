@@ -21,8 +21,6 @@
 <script type="text/javascript" src="histats.min.js"></script>
 <script type="text/javascript" src="//bitmovin-a.akamaihd.net/bitmovin-player/stable/7.4/bitmovinplayer.js"></script>
 <script type="text/javascript">
-const currentLocation = window.location.search;
-const sURL = currentLocation.replace("?live&url=", "");
 var container = document.getElementById("my-player");
 var config = {
   key: "c6d7e091-e62e-4bda-819f-99bb13506fba",
@@ -57,9 +55,7 @@ var config = {
     poster: "", 
   }
 };
-
 var player = bitmovin.player("my-player");
-
 player.setup(config).then(
   function (value) {
     // Success
