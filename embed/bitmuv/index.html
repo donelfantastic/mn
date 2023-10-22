@@ -16,11 +16,13 @@
 </head>
 <body>
 <body oncontextmenu="return false" onkeydown="return false" onmousedown="return false">
-  <div id="my-player" class="container player-container"></div>
+  <div id="my-player"></div>
 </body>
 <script type="text/javascript" src="histats.min.js"></script>
-<script type="text/javascript" src="//bitmovin-a.akamaihd.net/bitmovin-player/stable/7.4/bitmovinplayer.js"></script>
+<script type="text/javascript" src="//cdn.bitmovin.com/player/web/8.52.0/bitmovinplayer.js"></script>
 <script type="text/javascript">
+const currentLocation = window.location.search;
+const sURL = currentLocation.replace("?live&url=", "");  
 var container = document.getElementById("my-player");
 var config = {
   key: "c6d7e091-e62e-4bda-819f-99bb13506fba",
