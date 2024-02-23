@@ -22,30 +22,6 @@
 <!--//v8.52.0//-->
 <script type="text/javascript" src="//cdn.bitmovin.com/player/web/8.137.0/bitmovinplayer.js"></script>
   <script type="text/javascript">
-function arrayBufferToBase64(arrayBuffer) {
-    return btoa(String.fromCodePoint(...new Uint8Array(arrayBuffer)));
-  }
-
-  function base64ToArrayBuffer(base64) {
-    const binaryString = window.atob(base64);
-    const length = binaryString.length;
-    const bytes = new Uint8Array(length);
-
-    for (let i = 0; i < length; i++) {
-      bytes[i] = binaryString.charCodeAt(i);
-    }
-
-    return bytes.buffer;
-  }
-
-  var bufferConfig = {};
-  var bufferLevels = {};
-
-  bufferLevels['forwardduration'] = 12;
-  bufferLevels['backwardduration'] = 12,
-  bufferConfig['video'] = bufferLevels;
-  bufferConfig['audio'] = bufferLevels;
-    
   var container = document.getElementById("my-player");
   var config = {
     key: "c6d7e091-e62e-4bda-819f-99bb13506fba",
@@ -74,19 +50,6 @@ function arrayBufferToBase64(arrayBuffer) {
         }
       ]
     }, 
-    network: {
-      preprocessHttpResponse: (type, response) => {
-        if ([bitmovin.player.HttpRequestType.MEDIA_VIDEO].indexOf(type) > -1) {
-          response.body = processSegment(response.body);
-          checkEMSGStatus(response.body)
-        }
-        return Promise.resolve(response);
-      }
-    },
-    buffer: bufferConfig,
-    logs: {
-      level: 'debug'
-    },
     events: {
       metadata: onMetadataEvent,
     },
