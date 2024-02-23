@@ -28,6 +28,9 @@
     playback: {
       muted: true,
       autoplay: true, 
+      events: {
+      metadata: onMetadataEvent,
+      },
       preferredTech: [{
           player: "html5",
           streaming: "Dash",
@@ -50,9 +53,6 @@
         }
       ]
     }, 
-   /* events: {
-      metadata: onMetadataEvent,
-    },*/
     tweaks: {
       file_protocol: true,
       BACKWARD_BUFFER_PURGE_INTERVAL: 10,
