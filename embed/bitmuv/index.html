@@ -28,8 +28,8 @@ var container = document.getElementById("my-player");
 var config = {
   key: "c6d7e091-e62e-4bda-819f-99bb13506fba",
   playback: {
-    muted: false,
-    autoplay: false,
+    muted: true,
+    autoplay: true,
     preferredTech: [
       {
         player: "html5",
@@ -55,8 +55,16 @@ var config = {
   },
   source: {
     progressive: sURL,
-    type: "application/x-mpegURL", 
+    type: "application/vnd.apple.mpegurl", 
     poster: "" 
+  },
+  tweaks: {
+      file_protocol: true,
+      BACKWARD_BUFFER_PURGE_INTERVAL: 10,
+      enable_seek_for_live: true,
+      fairplay_ignore_duplicate_init_data_key_errors: true,
+      startup_threshold: 4,
+      restart_threshold: 4
   }, 
 }
 var player = bitmovin.player("my-player");
