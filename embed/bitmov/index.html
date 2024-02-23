@@ -26,8 +26,8 @@
   var config = {
     key: "c6d7e091-e62e-4bda-819f-99bb13506fba",
     playback: {
-      muted: false,
-      autoplay: false, 
+      muted: true,
+      autoplay: true, 
       preferredTech: [{
           player: "html5",
           streaming: "Dash",
@@ -54,7 +54,7 @@
 const currentLocation = window.location.search;
 const sURL = currentLocation.replace("?live&url=", "");
   var source = {   
-    progressive:sURL,
+    progressive: sURL,
     poster:"",   
   };
 
