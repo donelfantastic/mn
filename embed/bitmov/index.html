@@ -30,7 +30,7 @@
       autoplay: true, 
       preferredTech: [{
           player: "html5",
-          streaming: "Dash",
+          streaming: "dash",
         },
         {
           player: "html5",
@@ -63,10 +63,10 @@ const currentLocation = window.location.search;
 const sURL = currentLocation.replace("?live&url=", "");
   
     var source = {   
-    progressive: sURL,
-    hls: sURL, 
+    //progressive: sURL,
+    //hls: sURL, 
     dash: sURL, 
-    smooth: sURL,  
+    //smooth: sURL,  
     poster:"",   
   };
 
