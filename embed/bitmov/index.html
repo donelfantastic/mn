@@ -62,12 +62,8 @@
 const currentLocation = window.location.search;
 const sURL = currentLocation.replace("?live&url=", "");
   
-    var source = [{   
+    var source = {   
     progressive: sURL,
-    }, {         
-    hls: sURL, }, {
-    dash: sURL, }, {
-    smooth: sURL, }], 
     poster:"",   
   };
 
