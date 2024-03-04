@@ -46,9 +46,7 @@
         edgeStyle: "raised"
       },
       playlist: [{
-        title: "",
-        description: "",
-        image: "",
+        image: "//donelfantastic.github.io/assets/poster.gif",
         sources: [{
           type: "application/dash+xml",
           file: sURL,
@@ -60,17 +58,17 @@
               url: ""
               }
           },
-          default: true,
+          //default: true,
         },
         {
           type: "application/vnd.apple.mpegurl",
           file: sURL,
-          drm: {
+          /*drm: {
             fairplay: {
               processSpcUrl: "", 
               certificateUrl: "" 
             },
-          },
+          },*/
           }],
       }],
     });
