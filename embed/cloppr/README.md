@@ -1,1 +1,1 @@
-clappr+shaka integrate
+Clappr+Shaka integrate + widevine
