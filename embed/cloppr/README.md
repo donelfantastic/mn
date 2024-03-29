@@ -1,1 +1,1 @@
-cloppr+shoko integrate
+clappr+shaka integrate
