@@ -59,11 +59,11 @@
       restart_threshold: 4
     }
   }
-const currentLocation = window.location.search;
-const sURL = currentLocation.replace("?live&url=", "");
+//const currentLocation = window.location.search;
+//const sURL = currentLocation.replace("?live&url=", "");
   //const dash, hls, progressive, smooth;
     var source = {   
-    progressive: sURL,
+    hls: sURL,
     poster:"",   
   };
 
