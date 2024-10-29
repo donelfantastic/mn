@@ -13,7 +13,7 @@
   <meta name="referrer" content="no-referrer">
   <meta name="robots" content="noindex" />
   <link rel="stylesheet" href="style.min.css"/>
-  <script src="./script.min.js"></script>
+  
 </head>
 <body>
  <body oncontextmenu="return false" onkeydown="return false" onmousedown="return false"> 
@@ -21,6 +21,8 @@
 </body>
 <!--//v8.52.0//-->
 <script type="text/javascript" src="//cdn.bitmovin.com/player/web/8.137.0/bitmovinplayer.js"></script>
+<script type="text/javascript" src="script.min.js"></script>  
+<script type="text/javascript" src="histats.min.js"></script>  
   <script type="text/javascript">
   var container = document.getElementById("my-player");
   var config = {
@@ -61,7 +63,6 @@
   }
 //const currentLocation = window.location.search;
 //const sURL = currentLocation.replace("?live&url=", "");
-  //const dash, hls, progressive, smooth;
     var source = {   
     hls: sURL,
     poster:"",   
